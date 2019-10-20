@@ -1,0 +1,10 @@
+<header class="header s-pad-t-base s-pad-b-base">
+    <div class="wrapper u-flex u-justify-space-between">
+        <span class="u-visually-hidden">{{site.name}} : {{pageName}}</span>
+        <a href="/" class="logo u-flex u-justify-space-center u-align-center">
+            m
+            <span class="u-visually-hidden">{{ 'Back to homepage' if page.url != '/' else 'Homepage' }}</span>
+        </a>
+        {% include "partials/components/nav.njk" %}
+    </div>
+</header>

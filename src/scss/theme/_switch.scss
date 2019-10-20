@@ -1,0 +1,12 @@
+.theme-switch {
+    text-transform: uppercase;
+    font-size: var(--size-300);
+    background-color: var(--grey);
+    color: var(--font-color);
+    padding: var(--space-min);
+    border-radius: 3px;
+
+    input[type="checkbox"] {
+        display: none;
+    }
+}

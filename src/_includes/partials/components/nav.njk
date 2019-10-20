@@ -1,0 +1,20 @@
+{% if site.navItems %}
+<nav aria-label="main-navigation">
+    <ul role="menubar">
+        {% for item in site.navItems %}
+            {% if item.external %}
+                {% set target = 'target="_blank"' %}
+            {% endif %}  
+            <li role="menuitem" class="u-inline-block s-marg-l-small">
+                <a href="{{item.url}}" {{target}}>{{item.name}}</a>
+            </li>
+        {% endfor %}
+            <li role="menuitem" class="switch u-inline-block s-marg-l-small">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <span class="text">Dark</span>
+                </label>
+            </li>
+    </ul>
+</nav>
+{% endif %}

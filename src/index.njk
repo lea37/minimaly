@@ -1,0 +1,20 @@
+---
+title: Homepage
+description: Homepage
+layout: layouts/base.njk
+pageName: Homepage
+pageClass: homepage
+---
+{% include "partials/components/cover.njk" %}
+
+<div class="postsList s-marg-t-small s-marg-b-small">
+    <div class="wrapper">
+        <h2 class="postsList__title s-marg-b-small">Derniers articles :</h2>
+        {%- for item in collections.lastPosts -%}
+            {% set loopIndex = loop.index0 %}
+            {% set loopNumber = loop.index %}
+            {% include 'partials/components/post-list.njk' %}
+        {%- endfor -%}
+        <a href="/blog/">Voir tous les articles -></a>
+    </div>
+</div>

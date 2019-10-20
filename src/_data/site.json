@@ -1,0 +1,33 @@
+{
+  "name": "Minimaly Starter Kit",
+  "shortDesc": "Minimaly is a minimal lightweight Eleventy starter kit to help you to create your own blog or personal website.",
+  "url": "https://minimal.website",
+  "authorEmail": "leatortay@gmail.com",
+  "authorHandle": "@leatortay",
+  "authorName": "Lea Tortay",
+  "maxPostsPerPage": 5,
+  "faviconPath": "/images/favicon.png",
+  "logoPath": "/images/logo.svg",
+  "coverBackground": "/images/cover-background.jpg",
+  "coverBackgroundColor": "#000000",
+  "coverTitle": "My personnal blog",
+  "coverSubtitle": "Talking about many things !",
+  "maxPostsPerPage": 5,
+  "navItems": [
+    {
+        "name": "Home",
+        "url": "/",
+        "external": false
+    },
+    {
+        "name": "Github",
+        "url": "https://github.com/lea37",
+        "external": true
+    },
+    {
+        "name": "Blog",
+        "url": "/blog/",
+        "external": false
+    }
+  ]
+}

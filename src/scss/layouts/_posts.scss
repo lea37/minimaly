@@ -1,0 +1,32 @@
+.postsList {
+    &__title {
+        font-size: var(--size-600);
+        font-weight: 800;
+    }
+}
+
+.post {
+    border-top: 2px solid var(--dark);
+
+    &__inner {
+        max-width: 40rem;
+    }
+
+    .date {
+        color: var(--grey);
+    }
+
+    h1 {
+        font-size: var(--size-700);
+    }
+
+    h2 {
+        margin-top: var(--space-small);
+        margin-bottom: calc(var(--space-base) / 2);
+    }
+
+    p {
+        font-size: var(--size-500);
+        margin-bottom: var(--space-base);
+    }
+}

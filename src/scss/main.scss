@@ -1,0 +1,96 @@
+:root {
+  --measure: 60rem;
+  --ratio: 1.5;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+  --font-color: var(--dark);
+  --bg-color: var(--light);
+}
+
+[data-theme="dark"] {
+    --font-color: var(--light);
+    --bg-color: var(--dark);
+}
+
+// UTILS 
+@import "utils/reset";
+@import "utils/mixins";
+@import "utils/helpers";
+
+// SETTINGS (generated from config.json tokens)
+@import "settings/mapping";
+@import "settings/color";
+@import "settings/spaces";
+@import "settings/sizes";
+@import "settings/weights";
+
+// THEME GLOBAL PURPOSE
+@import "theme/stack";
+@import "theme/box";
+@import "theme/center";
+@import "theme/cluster";
+@import "theme/cover";
+
+@import "theme/switch";
+
+// LAYOUTS
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/posts";
+
+
+* {
+  max-width: var(--measure);
+}
+
+html,
+body,
+div,
+header,
+nav,
+main,
+footer {
+  max-width: none;
+}
+
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+.wrapper {
+  @media screen and (max-width: 50em) {
+    padding: var(--space-base);
+  }
+  max-width: var(--measure);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+a {
+  color: var(--font-color);
+}
+
+a:focus {
+   outline: auto 2px Highlight; // for non-webkit browsers
+   outline: auto 5px -webkit-focus-ring-color; // for webkit browsers
+}

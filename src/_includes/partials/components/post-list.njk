@@ -1,0 +1,8 @@
+<div class="s-marg-b-small">
+    <date>{{ item.date | dateDisplay }}</date>
+    {% if item.data.externalurl %}
+        <h3><a href="{{ item.data.externalurl }}">{{ item.data.title }}</a></h3>
+    {% else %}
+        <h3><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
+    {% endif %}
+</div>

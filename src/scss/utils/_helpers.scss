@@ -1,0 +1,27 @@
+// TEXT
+.u-center { text-align: center; }
+
+// DISPLAY
+.u-inline-block { display: inline-block; }
+.u-flex { display: flex; }
+.u-justify-space-between { justify-content: space-between; }
+.u-justify-space-center { justify-content: center; }
+.u-align-center { align-items: center; }
+
+// A11TY
+.u-visually-hidden {
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+}
+
+// BACKGROUND
+.u-cover { 
+    height: 100%;
+    background-size: cover;
+    background-position: 50%;
+}

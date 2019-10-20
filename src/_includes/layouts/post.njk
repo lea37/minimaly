@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk 
+pageClass: "single-post"
+---
+
+{% block content %}
+    <article class="post wrapper s-pad-t-small s-pad-b-small">
+        <div class="post__inner">
+            <div class="infos s-marg-b-small">
+                <h1>{{ title }}</h1>
+                <date class="date">{{ date | dateDisplay }}</date>
+            </div>
+            {{ content | safe }}
+        </div>
+    </article>
+{% endblock %}
