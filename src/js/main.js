@@ -12,7 +12,7 @@ window.addEventListener('load', function() {
   }
   
   // THEME SWITCH
-  const toggleText = document.querySelector('.theme-switch .text');
+  const toggleText = document.querySelector('.theme-switch-wrapper .text');
   const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
   const currentTheme = localStorage.getItem('theme');
   toggleText.innerHTML = currentTheme;
@@ -29,12 +29,12 @@ window.addEventListener('load', function() {
       if (e.target.checked) {
           document.documentElement.setAttribute('data-theme', 'dark');
           localStorage.setItem('theme', 'dark');
-          toggleText.innerHTML = 'Light';
+          toggleText.innerHTML = 'Dark';
       }
       else {        
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
-        toggleText.innerHTML = 'Dark';
+        toggleText.innerHTML = 'Light';
       }    
   }
 

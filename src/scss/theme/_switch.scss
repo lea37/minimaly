@@ -3,9 +3,11 @@
   display: flex;
   align-items: center;
   
-    em {
+    .text {
         margin-left: 10px;
         font-size: var(--size-300);
+        font-style: italic;
+        text-transform: capitalize;
     }
 
     .theme-switch {
