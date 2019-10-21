@@ -1,5 +1,6 @@
 # Minimaly
 
+## Features
 Minimaly is an eleventy starter with :  
 - Design tokens so you can brand it as you wish (color, font ...)
 - Custom navigation
@@ -13,14 +14,16 @@ It is inspired by [Hylia starter](https://github.com/hankchizljaw/hylia) by [And
 It is for simple markdown blog use only. Event if, once installed, you can do what you want with it !
 Look at [Eleventy doc](https://www.11ty.io/) cause it is super powerfull. 
 
-## Installation
+### 1 . Get the starter
+`git clone` the repo
 
-### 1 . First you have to `git clone` the repo.
+### 2 . Install it
+Once cloned, `cd minimaly` then `npm install` to install all the dependencies. 
 
-### 2 . Once installed, `cd minimaly` then `npm install` to install all the dependencies. 
+### 3 . Modify and play !
+You can then modify `token.json` in `src/_data` folder to change the color, font family, breakpoints ... It will automatically generate a `_tokens.scss` in `scss/settings` folder, do not change directly this file since it's automated, always modify `token.json` 
 
-### 3 . You can then modify `token.json` in `src/_data` folder to change the color, font family, breakpoints ... It will automatically generate a `_tokens.scss` in `scss/settings` folder, do not change directly this file since it's automated, always modify `token.json` 
-
-### 4 . You can run `npm run serve` and go to `localhost:8080` adress in your browser to check the result.
+### 4 . Run in the browser
+You can run `npm run serve` and go to `localhost:8080` adress in your browser to check the result.
 
 
