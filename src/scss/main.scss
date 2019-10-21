@@ -12,13 +12,13 @@
   --s3: calc(var(--s2) * var(--ratio));
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
-  --font-color: var(--dark);
-  --bg-color: var(--light);
+  --font-color: #000000;
+  --bg-color: #ffffff;
 }
 
 [data-theme="dark"] {
-    --font-color: var(--light);
-    --bg-color: var(--dark);
+    --font-color: #ffffff;
+    --bg-color: #000000;
 }
 
 // UTILS 
@@ -93,4 +93,8 @@ a {
 a:focus {
    outline: auto 2px Highlight; // for non-webkit browsers
    outline: auto 5px -webkit-focus-ring-color; // for webkit browsers
+}
+
+iframe {
+  width: 100%;
 }

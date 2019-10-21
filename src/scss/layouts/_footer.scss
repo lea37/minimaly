@@ -5,4 +5,23 @@
     .switch {
         display: none;
     }
+
+    nav {
+        ul {
+            @media screen and (max-width: 40em) {
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            li {
+                 margin-left: var(--space-min);
+                 margin-right: var(--space-min);
+                 margin-top: var(--space-base);
+
+                @media screen and (min-width: 40em) {
+                    margin-left: var(--space-small);
+                }
+            }
+        }
+    }
 }

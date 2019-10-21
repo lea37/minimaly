@@ -1,3 +1,39 @@
+.header {
+    @media screen and (min-width: 40em) {
+        padding-top: var(--space-base);
+        padding-bottom: var(--space-base);
+    }
+
+    @media screen and (max-width: 40em) {
+        .wrapper {
+            flex-direction: column;
+        }        
+    }
+
+    nav {
+        @media screen and (max-width: 40em) {
+            width: 100%;
+        }
+
+        ul {
+            @media screen and (max-width: 40em) {
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            li {
+                 margin-left: var(--space-min);
+                 margin-right: var(--space-min);
+                 margin-top: var(--space-base);
+
+                @media screen and (min-width: 40em) {
+                    margin-left: var(--space-small);
+                }
+            }
+        }
+    }
+}
+
 .logo {
     width: 55px;
     height: 55px;

@@ -1,19 +1,22 @@
 {% if site.navItems %}
 <nav aria-label="main-navigation">
-    <ul role="menubar">
+    <ul role="menubar" class="u-flex u-align-center">
         {% for item in site.navItems %}
             {% if item.external %}
                 {% set target = 'target="_blank"' %}
             {% endif %}  
-            <li role="menuitem" class="u-inline-block s-marg-l-small">
+            <li role="menuitem" class="u-inline-block">
                 <a href="{{item.url}}" {{target}}>{{item.name}}</a>
             </li>
         {% endfor %}
-            <li role="menuitem" class="switch u-inline-block s-marg-l-small">
-                <label class="theme-switch" for="checkbox">
-                    <input type="checkbox" id="checkbox" />
-                    <span class="text">Dark</span>
-                </label>
+            <li role="menuitem" class="switch u-inline-block">
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                    </label>
+                    <span class="text"><em>Dark</em></span>
+                </div>
             </li>
     </ul>
 </nav>

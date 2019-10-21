@@ -1,4 +1,4 @@
-(function() {
+window.addEventListener('load', function() {
   // SERVICE WORKER
   if ('serviceWorker' in navigator) {
     console.log('CLIENT: service worker registration in progress.');
@@ -10,11 +10,12 @@
   } else {
     console.log('CLIENT: service worker is not supported.');
   }
-
+  
   // THEME SWITCH
   const toggleText = document.querySelector('.theme-switch .text');
   const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
   const currentTheme = localStorage.getItem('theme');
+  toggleText.innerHTML = currentTheme;
 
   if (currentTheme) {
       document.documentElement.setAttribute('data-theme', currentTheme);
@@ -25,7 +26,6 @@
   }
 
   function switchTheme(e) {
-      e.preventDefault();
       if (e.target.checked) {
           document.documentElement.setAttribute('data-theme', 'dark');
           localStorage.setItem('theme', 'dark');
@@ -39,4 +39,4 @@
   }
 
   toggleSwitch.addEventListener('change', switchTheme, false);
-})();
+});
