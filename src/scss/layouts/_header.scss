@@ -1,7 +1,9 @@
 .header {
+    border-bottom: 2px solid var(--text-color);
+
     @media screen and (min-width: 40em) {
-        padding-top: var(--space-base);
-        padding-bottom: var(--space-base);
+        padding-top: var(--sizes-base);
+        padding-bottom: var(--sizes-base);
     }
 
     @media screen and (max-width: 40em) {
@@ -22,12 +24,12 @@
             }
 
             li {
-                 margin-left: var(--space-min);
-                 margin-right: var(--space-min);
-                 margin-top: var(--space-base);
+                 margin-left: var(--sizes-base);
+                 margin-right: var(--sizes-base);
+                 margin-top: var(--sizes-base);
 
                 @media screen and (min-width: 40em) {
-                    margin-left: var(--space-small);
+                    margin-left: var(--sizes-small);
                 }
             }
         }
@@ -40,7 +42,7 @@
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 800;
-    background-color: var(--bg-color);
-    color: var(--font-color);
+    background-color: var(--background);
+    color: var(--text-color);
     filter: invert(100%);
 }

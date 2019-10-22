@@ -1,25 +1,19 @@
 const { DateTime }  = require("luxon");
 const pluginRss     = require("@11ty/eleventy-plugin-rss");
-// Import data files to use it for collection
+
+// Import data files to use it for collections
 const site = require('./src/_data/site.json');
 
 module.exports = function(config) {
+    // Copy files for services worker purpose and images
     config.addPassthroughCopy("src/images");
     config.addPassthroughCopy({"src/js/service-worker.js": "service-worker.js"});
     config.addPassthroughCopy({ "src/_includes/css/main.min.css": "css/main.min.css" });
 
+    // Date format with luxon
     config.addFilter("dateDisplay", require("./src/filters/date.js") );
 
     config.addPlugin(pluginRss);
-
-    // Get the first `n` elements of a collection.
-    config.addFilter("head", (array, n) => {
-        if( n < 0 ) {
-          return array.slice(n);
-        }
-
-        return array.slice(0, n);
-    });
 
     config.addTransform("htmlmin", require("./src/filters/minify-html.js"));
 
@@ -28,6 +22,7 @@ module.exports = function(config) {
       return collection.getFilteredByGlob("./src/posts/*.md").reverse();
     });
 
+    // Home collection
     config.addCollection('lastPosts', collection => {
         return [...collection.getFilteredByGlob('./src/posts/*.md')]
           .reverse()

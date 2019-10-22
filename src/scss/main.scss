@@ -1,5 +1,7 @@
 :root {
   --measure: 60rem;
+  --font-color: #000000;
+  --bg-color: #ffffff;
   --ratio: 1.5;
   --s-5: calc(var(--s-4) / var(--ratio));
   --s-4: calc(var(--s-3) / var(--ratio));
@@ -12,13 +14,17 @@
   --s3: calc(var(--s2) * var(--ratio));
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
-  --font-color: #000000;
-  --bg-color: #ffffff;
-}
-
-[data-theme="dark"] {
-    --font-color: #ffffff;
-    --bg-color: #000000;
+  // dark mode enable vars
+  --color-mode: 'light';
+  --color-dark: var(--colors-dark);
+  --color-dark-alpha: rgba(0, 0, 0, 0.1);
+  --color-light: var(--colors-light);
+  --color-light-alpha: rgba(255, 255, 255, 0.9);
+  --background: var(--colors-light);
+  --text-color: var(--colors-dark);
+  --button-background: var(--color-dark);
+  --button-color: var(--color-light);
+  --border-color: var(--color-dark-alpha);
 }
 
 // UTILS 
@@ -29,16 +35,18 @@
 // SETTINGS (generated from config.json tokens)
 @import "settings/mapping";
 @import "settings/color";
-@import "settings/spaces";
+@import "settings/breakpoints";
 @import "settings/sizes";
-@import "settings/weights";
+@import "settings/fonts";
 
 // THEME GLOBAL PURPOSE
 @import "theme/stack";
 @import "theme/box";
+@import "theme/grid";
 @import "theme/center";
 @import "theme/cluster";
 @import "theme/cover";
+@import "theme/frame";
 
 @import "theme/switch";
 
@@ -46,10 +54,12 @@
 @import "layouts/header";
 @import "layouts/footer";
 @import "layouts/posts";
+@import "layouts/card";
 
 
 * {
   max-width: var(--measure);
+  box-sizing: border-box;
 }
 
 html,
@@ -68,31 +78,52 @@ html { font-family: 'Inter', sans-serif; }
   html { font-family: 'Inter var', sans-serif; }
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
-  background-color: var(--bg-color);
-  color: var(--font-color);
+  background-color: var(--background);
+  color: var(--text-color);
+  transition: background 500ms ease-in-out, color 200ms ease;
 }
 
-.wrapper {
-  @media screen and (max-width: 50em) {
-    padding: var(--space-base);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark';
+  }
+
+  :root:not([data-user-color-scheme]) {
+    --background: var(--color-dark);
+    --text-color: var(--color-light);
+    --button-background: var(--color-light);
+    --button-color: var(--color-dark);
+  }
+}
+
+[data-user-color-scheme='dark'] {
+  --background: var(--color-dark);
+  --text-color: var(--color-light);
+  --button-background: var(--color-light-alpha);
+  --button-color: var(--color-dark);
+}
+
+.inner-wrapper {
+  @media screen and (max-width: var(--breakpoints-md)) {
+    padding: var(--sizes-base);
   }
   max-width: var(--measure);
   margin-right: auto;
   margin-left: auto;
+
+  &--small {
+    max-width: 40rem;
+  }
 }
 
 a {
-  color: var(--font-color);
+  color: var(--text-color);
 }
 
 a:focus {
-   outline: auto 2px Highlight; // for non-webkit browsers
-   outline: auto 5px -webkit-focus-ring-color; // for webkit browsers
+  outline: none; /* Reset the default */
+  box-shadow: 0 0 0 3px var(--colors-hightlight); /* A very obvious state change */
 }
 
 iframe {

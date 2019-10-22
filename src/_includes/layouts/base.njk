@@ -27,7 +27,7 @@
 </head> 
 <body class="{{ pageClass }}"> 
   {% include "partials/header.njk" %}
-  {{ content | safe }}
+  <main id="main-content">{{ content | safe }}</main>
   {% include "partials/footer.njk" %}
   <script src="http://192.168.1.74:8080/js/main.min.js"></script>
 </body> 

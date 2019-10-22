@@ -1,0 +1,7 @@
+.card {
+    &__body {
+        > * + * {
+            margin-top: var(--size-300);
+        }
+    }
+}

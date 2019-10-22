@@ -5,13 +5,17 @@ layout: layouts/base.njk
 pageName: Blog
 pageClass: blog
 ---
-<div class="postsList s-marg-t-small">
-    <div class="wrapper">
-        <h2 class="postsList__title s-marg-b-small">Tous les articles :</h2>
-        {%- for item in collections.posts -%}
-            {% set loopIndex = loop.index0 %}
-            {% set loopNumber = loop.index %}
-            {% include 'partials/components/post-list.njk' %}
-        {%- endfor -%}
+<div class="s-marg-t-600 s-marg-b-600"> 
+    <div class="inner-wrapper">
+        <h2 class="s-marg-b-600">Tous les articles :</h2>
+        {% if site.showAsGrid %}
+            <div class="grid">
+        {% endif %}
+            {%- for item in collections.posts -%}
+                {% include 'partials/components/post-list.njk' %}
+            {%- endfor -%}
+        {% if site.showAsGrid %}
+            </div>
+        {% endif %}
     </div>
 </div>

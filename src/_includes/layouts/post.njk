@@ -4,13 +4,11 @@ pageClass: "single-post"
 ---
 
 {% block content %}
-    <article class="post wrapper s-pad-t-small s-pad-b-small">
-        <div class="post__inner">
-            <div class="infos s-marg-b-small">
-                <h1>{{ title }}</h1>
-                <date class="date">{{ date | dateDisplay }}</date>
-            </div>
-            {{ content | safe }}
-        </div>
+    <article class="post inner-wrapper inner-wrapper--small s-pad-t-base s-pad-b-base">
+        <header class="s-pad-b-500">
+            <h1>{{ title }}</h1>
+            <date class="date">{{ date | dateDisplay }}</date>
+        </header>
+        {{ content | safe }}
     </article>
 {% endblock %}

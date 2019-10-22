@@ -1,6 +1,7 @@
 ---
 title: My third post
 date: 2019-07-10
+desc: 'You can write a small thing about the post'
 ---
 
 ## Some title

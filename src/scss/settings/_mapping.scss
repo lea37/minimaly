@@ -1,7 +1,6 @@
 @import 'tokens';
 
-$minimaly-size-scale: map-get($tokens, 'size-scale');
+$minimaly-sizes: map-get($tokens, 'sizes');
 $minimaly-colors: map-get($tokens, 'colors');
-$minimaly-spaces: map-get($tokens, 'spaces');
 $minimaly-breakpoints: map-get($tokens, 'breakpoints');
-$minimaly-weights: map-get($tokens, 'weights');
+$minimaly-fonts: map-get($tokens, 'fonts');

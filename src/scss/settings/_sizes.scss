@@ -1,5 +1,47 @@
 :root {
-    @each $key, $val in $minimaly-size-scale {
-        --size-#{$key}: #{$val};
+  @each $key, $val in $minimaly-sizes {
+    --sizes-#{$key}: #{$val};
+  }
+}
+
+// MARGIN
+@each $i, $spacing in $minimaly-sizes {
+  .s-marg-#{$i}{ margin: #{$spacing}; }
+  .s-marg-t-#{$i}{ margin-top: #{$spacing}; }
+  .s-marg-r-#{$i}{ margin-right: #{$spacing}; }
+  .s-marg-b-#{$i}{ margin-bottom: #{$spacing}; }
+  .s-marg-l-#{$i}{ margin-left: #{$spacing}; }
+}
+
+@each $key, $bp in $minimaly-breakpoints {
+    @media ( max-width: #{$bp} ) {
+      @each $i, $spacing in $minimaly-sizes {
+        .s-marg-#{$i}--#{$key}{ margin: #{$spacing}; }
+        .s-marg-t-#{$i}--#{$key}{ margin-top: #{$spacing}; }
+        .s-marg-r-#{$i}--#{$key}{ margin-right: #{$spacing}; }
+        .s-marg-b-#{$i}--#{$key}{ margin-bottom: #{$spacing}; }
+        .s-marg-l-#{$i}--#{$key}{ margin-left: #{$spacing}; }
+      }
+    }
+}
+
+// PADDING
+@each $i, $spacing in $minimaly-sizes {
+  .s-pad-#{$i}{ padding: #{$spacing}; }
+  .s-pad-t-#{$i}{ padding-top: #{$spacing}; }
+  .s-pad-r-#{$i}{ padding-right: #{$spacing}; }
+  .s-pad-b-#{$i}{ padding-bottom: #{$spacing}; }
+  .s-pad-l-#{$i}{ padding-left: #{$spacing}; }
+}
+
+@each $key, $bp in $minimaly-breakpoints {
+    @media ( max-width: #{$bp} ) {
+      @each $i, $spacing in $minimaly-sizes {
+        .s-pad-#{$i}--#{$key}{ padding: #{$spacing}; }
+        .s-pad-t-#{$i}--#{$key}{ padding-top: #{$spacing}; }
+        .s-pad-r-#{$i}--#{$key}{ padding-right: #{$spacing}; }
+        .s-pad-b-#{$i}--#{$key}{ padding-bottom: #{$spacing}; }
+        .s-pad-l-#{$i}--#{$key}{ padding-left: #{$spacing}; }
+      }
     }
 }

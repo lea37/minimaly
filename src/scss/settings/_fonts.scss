@@ -1,0 +1,5 @@
+:root {
+  @each $key, $val in $minimaly-fonts {
+    --fonts-#{$key}: #{$val};
+  }
+}

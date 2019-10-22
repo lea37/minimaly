@@ -1,15 +1,22 @@
 .grid {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
   grid-gap: 1rem;
-  grid-template-columns: 100%;
 }
 
-.grid.aboveMin {
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+.grid > * {
+  max-width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-// @supports (width: min(20rem, 100%)) {
-//   .grid {
-//     grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
-//   }
-// }
+.grid > * + * {
+  margin-top: 1rem;
+}
+
+@supports (display: grid) {
+  .grid > * {
+    max-width: unset;
+    margin: 0;
+  }
+}

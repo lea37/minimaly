@@ -1,61 +1,25 @@
-/*slider switch css */
-.theme-switch-wrapper {
-  display: flex;
-  align-items: center;
-  
-    .text {
-        margin-left: 10px;
-        font-size: var(--size-300);
-        font-style: italic;
-        text-transform: capitalize;
-    }
+.no-js .user-toggle {
+  display: none;
+}
 
-    .theme-switch {
-        display: inline-block;
-        height: 24px;
-        position: relative;
-        width: 40px;
+.user-toggle {
+  max-width: 20rem;
+  text-align: center;
+}
 
-        input {
-            display:none;
-        }
+.toggle-button {
+  display: inline-flex;
+  background: var(--button-background);
+  color: var(--button-color);
+  border: none;
+  border-radius: 3px;
+  font: inherit;
+  font-size: var(--size-min);
+  padding: 0.5rem 1rem;
+  transition: background 500ms ease-in-out, color 200ms ease;
+}
 
-        input:checked + .slider {
-          background-color: #66bb6a;
-        }
-
-        input:checked + .slider:before {
-          transform: translateX(16px);
-        }
-
-        .slider {
-            background-color: #ccc;
-            bottom: 0;
-            cursor: pointer;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-            transition: .4s;
-
-            &:before {
-                background-color: #fff;
-                bottom: 4px;
-                content: "";
-                height: 16px;
-                left: 4px;
-                position: absolute;
-                transition: .4s;
-                width: 16px;
-            }
-
-            &.round {
-                border-radius: 24px;
-
-                &:before {
-                    border-radius: 50%;
-                }
-            }
-        }
-    }
+.toggle-button:focus {
+  outline: 1px solid var(--button-background);
+  outline-offset: 0.5rem;
 }

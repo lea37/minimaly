@@ -13,6 +13,8 @@
   "coverTitle": "My personnal blog",
   "coverSubtitle": "Talking about many things !",
   "maxPostsPerPage": 5,
+  "postWithImage": true,
+  "showAsGrid": true,
   "navItems": [
     {
         "name": "Home",

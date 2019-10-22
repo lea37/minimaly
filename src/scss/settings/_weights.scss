@@ -1,5 +1,0 @@
-:root {
-    @each $key, $val in $minimaly-weights {
-        --weight-#{$key}: #{$val};
-    }
-}

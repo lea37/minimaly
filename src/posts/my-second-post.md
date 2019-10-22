@@ -1,6 +1,7 @@
 ---
 title: My second post
 date: 2019-06-19
+image: '02.jpg'
 ---
 
 ## Some title

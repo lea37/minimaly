@@ -10,12 +10,11 @@
             </li>
         {% endfor %}
             <li role="menuitem" class="switch u-inline-block">
-                <div class="theme-switch-wrapper">
-                    <label class="theme-switch" for="checkbox">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round"></div>
-                    </label>
-                    <span class="text"><em>Dark</em></span>
+                <div class="user-toggle">
+                    <div role="status" class="u-visually-hidden js-mode-status"></div>
+                    <button class="toggle-button js-mode-toggle">
+                        <span class="toggle-button__text js-mode-toggle-text">Dark mode</span>
+                    </button>
                 </div>
             </li>
     </ul>

@@ -1,6 +1,6 @@
 .footer {
-    background-color: var(--bg-color);
-    filter: invert(100%);
+    background-color: var(--background);
+    border-top: 2px solid var(--button-background);
 
     .switch {
         display: none;
@@ -14,12 +14,12 @@
             }
 
             li {
-                 margin-left: var(--space-min);
-                 margin-right: var(--space-min);
-                 margin-top: var(--space-base);
+                 margin-left: var(--sizes-min);
+                 margin-right: var(--sizes-min);
+                 margin-top: var(--sizes-base);
 
                 @media screen and (min-width: 40em) {
-                    margin-left: var(--space-small);
+                    margin-left: var(--sizes-small);
                 }
             }
         }

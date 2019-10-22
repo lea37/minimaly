@@ -7,14 +7,18 @@ pageClass: homepage
 ---
 {% include "partials/components/cover.njk" %}
 
-<div class="postsList s-marg-t-small s-marg-b-small">
-    <div class="wrapper">
-        <h2 class="postsList__title s-marg-b-small">Derniers articles :</h2>
-        {%- for item in collections.lastPosts -%}
-            {% set loopIndex = loop.index0 %}
-            {% set loopNumber = loop.index %}
-            {% include 'partials/components/post-list.njk' %}
-        {%- endfor -%}
-        <a href="/blog/">Voir tous les articles -></a>
+<div class="s-marg-t-600 s-marg-b-600">
+    <div class="inner-wrapper">
+        <h2 class="s-marg-b-600">Derniers articles :</h2>
+        {% if site.showAsGrid %}
+            <div class="grid">
+        {% endif %}
+            {%- for item in collections.lastPosts -%}
+                {% include 'partials/components/post-list.njk' %}
+            {%- endfor -%}
+        {% if site.showAsGrid %}
+            </div>
+        {% endif %}
+        <a href="/blog/" class="u-flex u-justify-content-end s-marg-t-600">Voir tous les articles -></a>
     </div>
 </div>
