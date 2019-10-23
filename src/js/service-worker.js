@@ -13,8 +13,8 @@ var version = 'v1::';
 */
 var offlineFundamentals = [
   '',
-  './src/_includes/css/main.min.css',
-  './src/_includes/js/main.min.js'
+  './css/main.min.css',
+  './js/main.min.js'
 ];
 
 /* The install event fires when the service worker is first installed.
