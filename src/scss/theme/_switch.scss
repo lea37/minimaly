@@ -17,9 +17,9 @@
   font-size: var(--size-min);
   padding: 0.5rem 1rem;
   transition: background 500ms ease-in-out, color 200ms ease;
-}
 
-.toggle-button:focus {
-  outline: 1px solid var(--button-background);
-  outline-offset: 0.5rem;
+  &:focus {
+    outline: 1px solid var(--button-background);
+    outline-offset: 0.5rem;
+  }
 }

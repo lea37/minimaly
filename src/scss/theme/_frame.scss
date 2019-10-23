@@ -3,6 +3,13 @@
   --d: 16;
   padding-bottom: calc(var(--n) / var(--d) * 100%);
   position: relative;
+
+  &--square {
+    --n: 2;
+    --d: 2;
+    padding-left: calc(var(--n)/ var(--d) * 20%);
+    padding-bottom: calc(var(--n) / var(--d) * 20%);
+  }
 }
 
 .frame > * {

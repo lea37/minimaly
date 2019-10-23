@@ -12,6 +12,8 @@ pageClass: homepage
         <h2 class="s-marg-b-600">Derniers articles :</h2>
         {% if site.showAsGrid %}
             <div class="grid">
+        {% else %}
+            <div class="list">
         {% endif %}
             {%- for item in collections.lastPosts -%}
                 {% include 'partials/components/post-list.njk' %}
@@ -19,6 +21,8 @@ pageClass: homepage
         {% if site.showAsGrid %}
             </div>
         {% endif %}
-        <a href="/blog/" class="u-flex u-justify-content-end s-marg-t-600">Voir tous les articles -></a>
+        <div class="u-flex u-justify-content-end">
+            <a href="/blog/" class="s-marg-t-600">Voir tous les articles -></a>
+        </div>
     </div>
 </div>

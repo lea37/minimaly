@@ -3,6 +3,7 @@
 ## Features
 Minimaly is an eleventy starter with :  
 - Design tokens so you can brand it as you wish (color, font ...)
+- Eleventy data for all metas, cover and post display (grid, list, cover background ...)
 - Custom navigation
 - Blog ready with markdown post
 - RSS feed

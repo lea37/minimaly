@@ -3,7 +3,7 @@
     <div class="inner-wrapper u-flex u-justify-content-between u-align-center">
         <span class="u-visually-hidden">{{site.name}} : {{pageName}}</span>
         <a href="/" class="logo u-flex u-justify-content-center u-align-center">
-            m
+            <img src="{{site.logoPath}}" alt="">
             <span class="u-visually-hidden">{{ 'Back to homepage' if page.url != '/' else 'Homepage' }}</span>
         </a>
         {% include "partials/components/nav.njk" %}

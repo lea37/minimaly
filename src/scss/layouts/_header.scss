@@ -1,48 +1,28 @@
-.header {
-    border-bottom: 2px solid var(--text-color);
-
-    @media screen and (min-width: 40em) {
-        padding-top: var(--sizes-base);
-        padding-bottom: var(--sizes-base);
+.single-post,
+.blog {
+    .header {
+        border-bottom: 2px solid var(--text-color);
     }
+}
+
+.header {
+    padding-top: var(--sizes-base);
+    padding-bottom: var(--sizes-base);
 
     @media screen and (max-width: 40em) {
-        .wrapper {
+        .inner-wrapper {
             flex-direction: column;
         }        
-    }
-
-    nav {
-        @media screen and (max-width: 40em) {
-            width: 100%;
-        }
-
-        ul {
-            @media screen and (max-width: 40em) {
-                justify-content: space-between;
-                flex-wrap: wrap;
-            }
-
-            li {
-                 margin-left: var(--sizes-base);
-                 margin-right: var(--sizes-base);
-                 margin-top: var(--sizes-base);
-
-                @media screen and (min-width: 40em) {
-                    margin-left: var(--sizes-small);
-                }
-            }
-        }
     }
 }
 
 .logo {
     width: 55px;
     height: 55px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 800;
-    background-color: var(--background);
-    color: var(--text-color);
-    filter: invert(100%);
+    // text-transform: uppercase;
+    // text-decoration: none;
+    // font-weight: 800;
+    // background-color: var(--background);
+    // color: var(--text-color);
+    // filter: invert(100%);
 }

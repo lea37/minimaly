@@ -1,17 +1,22 @@
 <div class="card s-marg-b-small">
+   {% if site.showAsGrid %} 
+        {% set frameClass = 'frame' %}
+    {% else %}
+        {% set frameClass = 'frame frame--square' %}
+    {% endif %}
     {% if site.postWithImage %}
         {% if item.data.image %}
-            <div class="card__image frame">
+            <div class="card__image {{frameClass}}">
                 <img src="../images/posts/{{ item.data.image }}" alt="" aria-hidden="true">
             </div>
         {% else %}
-            <div class="card__image frame">
+            <div class="card__image {{frameClass}}">
                 <img src="../images/posts/default.png" alt="">
             </div>
         {% endif %}
     {% endif %}
     <div class="card__body">
-        <date>{{ item.date | dateDisplay }}</date>
+        <date class="s-grey">{{ item.date | dateDisplay }}</date>
         {% if item.data.externalurl %}
             <h3><a href="{{ item.data.externalurl }}">{{ item.data.title }}</a></h3>
         {% else %}

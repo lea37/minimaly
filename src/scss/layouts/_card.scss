@@ -1,7 +1,37 @@
-.card {
-    &__body {
-        > * + * {
-            margin-top: var(--size-300);
+.card__body > * + * {
+    margin-top: var(--sizes-300);
+}
+
+.grid {
+    .card {
+        margin-bottom: var(--sizes-600);
+
+        &__body {
+            margin-top: var(--sizes-300);
+        }
+    }
+}
+
+.list {
+    .card {
+        margin-bottom: var(--sizes-base);
+        display: flex;
+
+        &__body {
+            margin-left: var(--sizes-300);
+
+            > * + * {
+                margin-top: 0;
+                margin-bottom: var(--sizes-300);
+            }
+        }
+
+        .desc {
+            display: none;
+
+            @media screen and (min-width: 40rem) {
+                display: block;
+            }
         }
     }
 }

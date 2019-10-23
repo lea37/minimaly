@@ -1,7 +1,9 @@
 ---
 title: My second post
 date: 2019-06-19
+metaDesc: 'My second post meta description'
 image: '02.jpg'
+socialImage: ''
 ---
 
 ## Some title

@@ -10,6 +10,8 @@ pageClass: blog
         <h2 class="s-marg-b-600">Tous les articles :</h2>
         {% if site.showAsGrid %}
             <div class="grid">
+        {% else %}
+            <div class="list">
         {% endif %}
             {%- for item in collections.posts -%}
                 {% include 'partials/components/post-list.njk' %}

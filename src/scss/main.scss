@@ -1,7 +1,5 @@
 :root {
   --measure: 60rem;
-  --font-color: #000000;
-  --bg-color: #ffffff;
   --ratio: 1.5;
   --s-5: calc(var(--s-4) / var(--ratio));
   --s-4: calc(var(--s-3) / var(--ratio));
@@ -20,6 +18,7 @@
   --color-dark-alpha: rgba(0, 0, 0, 0.1);
   --color-light: var(--colors-light);
   --color-light-alpha: rgba(255, 255, 255, 0.9);
+
   --background: var(--colors-light);
   --text-color: var(--colors-dark);
   --button-background: var(--color-dark);
@@ -41,20 +40,24 @@
 
 // THEME GLOBAL PURPOSE
 @import "theme/stack";
-@import "theme/box";
 @import "theme/grid";
-@import "theme/center";
-@import "theme/cluster";
 @import "theme/cover";
 @import "theme/frame";
-
 @import "theme/switch";
 
 // LAYOUTS
 @import "layouts/header";
+@import "layouts/nav";
 @import "layouts/footer";
 @import "layouts/posts";
 @import "layouts/card";
+
+// FONT
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
 
 
 * {
@@ -72,18 +75,13 @@ footer {
   max-width: none;
 }
 
-@import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
-}
-
 body {
   background-color: var(--background);
   color: var(--text-color);
   transition: background 500ms ease-in-out, color 200ms ease;
 }
 
+// DARK MODE
 @media (prefers-color-scheme: dark) {
   :root {
     --color-mode: 'dark';
@@ -104,9 +102,11 @@ body {
   --button-color: var(--color-dark);
 }
 
+// GLOBAL
 .inner-wrapper {
-  @media screen and (max-width: var(--breakpoints-md)) {
-    padding: var(--sizes-base);
+  @media screen and (max-width: 50rem) {
+    padding-left: var(--sizes-base);
+    padding-right: var(--sizes-base);
   }
   max-width: var(--measure);
   margin-right: auto;

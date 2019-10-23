@@ -3,27 +3,13 @@
 <head> 
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="{{ site.shortDesc }}"/>
-  <title>{{ site.name }}</title>
-  <script>document.documentElement.classList.remove('no-js');</script>
-
-  <!-- open graph -->
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="{{ title }}">
-  <meta property="og:image" content="{{ data.image }}">
-  <meta property="og:site_name" content="{{ site.name }}">
-  <meta property="og:description" content="{{ description }}">
-
-  <!-- twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="{{ site.authorHandle }}">
-  <meta name="twitter:title" content="{{ title }}">
-  <meta name="twitter:description" content="{{ description }}">
-  <meta name="twitter:image" content="{{ data.image }}">
-
-  <style>{% include "css/main.min.css" %}</style>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:800&display=swap" rel="stylesheet"> 
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml" />
   <link rel="icon" href="{{ site.faviconPath }}" type="image/png" />
+  {% include "partials/metas.njk" %}
+  <script>document.documentElement.classList.remove('no-js');</script>
+  <style>{% include "css/main.min.css" %}</style>
 </head> 
 <body class="{{ pageClass }}"> 
   {% include "partials/header.njk" %}
