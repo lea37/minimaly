@@ -1,5 +1,0 @@
-:root {
-  @each $key, $val in $minimaly-breakpoints {
-    --breakpoints-#{$key}: #{$val};
-  }
-}

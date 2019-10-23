@@ -34,7 +34,6 @@
 // SETTINGS (generated from config.json tokens)
 @import "settings/mapping";
 @import "settings/color";
-@import "settings/breakpoints";
 @import "settings/sizes";
 @import "settings/fonts";
 
@@ -48,6 +47,7 @@
 // LAYOUTS
 @import "layouts/header";
 @import "layouts/nav";
+@import "layouts/logo";
 @import "layouts/footer";
 @import "layouts/posts";
 @import "layouts/card";

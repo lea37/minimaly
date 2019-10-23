@@ -11,15 +11,3 @@
   .s-stroke-#{$i}{ stroke: #{$color} }
   .s-border-#{$i}{ border-color: #{$color} }
 }
-
-@each $key, $bp in $minimaly-breakpoints {
-  @media ( max-width: #{$bp} ) {
-    @each $i, $color in $minimaly-colors {
-      .s-#{$i}--#{$key}{ color: #{$color}; }
-      .s-bg-#{$i}--#{$key}{ background-color: #{$color}; }
-      .s-fill-#{$i}--#{$key}{ fill: #{$color}; }
-      .s-stroke-#{$i}--#{$key}{ stroke: #{$color}; }
-      .s-border-#{$i}--#{$key}{ border-color: #{$color}; }
-    }
-  }
-}

@@ -5,4 +5,10 @@
     .switch {
         display: none;
     }
+
+    @media screen and (max-width: 40em) {
+        .inner-wrapper {
+            flex-direction: column;
+        }        
+    }
 }

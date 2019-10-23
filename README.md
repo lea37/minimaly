@@ -2,7 +2,7 @@
 
 ## Features
 Minimaly is an eleventy starter with :  
-- Design tokens so you can brand it as you wish (color, font ...)
+- Design tokens so you can brand it as you wish (color, sizes ...)
 - Eleventy data for all metas, cover and post display (grid, list, cover background ...)
 - Custom navigation
 - Blog ready with markdown post
@@ -22,7 +22,7 @@ Look at [Eleventy doc](https://www.11ty.io/) cause it is super powerfull.
 Once cloned, `cd minimaly` then `npm install` to install all the dependencies. 
 
 ### 3 . Modify and play !
-You can then modify `token.json` in `src/_data` folder to change the color, font family, breakpoints ... It will automatically generate a `_tokens.scss` in `scss/settings` folder, do not change directly this file since it's automated, always modify `token.json` 
+You can then modify `token.json` in `src/_data` folder to change the color, font family ... It will automatically generate a `_tokens.scss` in `scss/settings` folder, do not change directly this file since it's automated, always modify `token.json`. You can also change any data in `src/_data/site.json` to display your post as grid `showAsGrid: true` (default display is list) and to display cover, change the title, logo ...
 
 ### 4 . Run in the browser
 You can run `npm run serve` and go to `localhost:8080` adress in your browser to check the result.
