@@ -1,6 +1,18 @@
-<div class="cover u-cover" style="background-color: '{{site.coverBackgroundColor}}'; background-image: url('{{site.coverBackground}}');">
+{% if site.coverSubtitle %}
+    {% set subtitle = site.coverSubtitle %}
+{% endif %}
+
+{% if site.coverBackground %}
+    {% set coverBg %}background-image: url( "{{ site.coverBackground }}" ); {% endset %}
+{% endif %}
+
+{% if site.coverBackgroundColor %}
+    {% set coverBgColor %}background: {{ site.coverBackgroundColor }} cover; {% endset %}
+{% endif %}
+
+<div class="cover u-cover" style="{{ coverBgColor }} {{ coverBg }}">
   <div class="stack">
     <h1>{{ site.coverTitle }}</h1>
-    <p>{{ site.coverSubtitle }}</p>
+    <p>{{ subtitle }}</p>
   </div>
 </div>

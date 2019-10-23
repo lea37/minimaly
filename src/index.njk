@@ -5,7 +5,9 @@ layout: layouts/base.njk
 pageName: Homepage
 pageClass: homepage
 ---
-{% include "partials/components/cover.njk" %}
+{% if site.coverTitle %}
+    {% include "partials/components/cover.njk" %}
+{% endif %}
 
 <div class="s-marg-t-600 s-marg-b-600">
     <div class="inner-wrapper">
