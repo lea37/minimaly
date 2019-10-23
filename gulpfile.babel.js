@@ -14,7 +14,7 @@ const paths = {
   },
   scripts: {
     src: 'src/js/main.js',
-    dest: './src/site/_includes/js'
+    dest: './src/_includes/js'
   }
 };
  
