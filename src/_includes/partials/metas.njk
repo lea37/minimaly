@@ -3,14 +3,6 @@
 {% set siteTitle = site.title %}
 {% set currentUrl = site.url + page.url %}
 
-{% if metaTitle %}
-  {% set pageTitle = metaTitle %}
-{% endif %}
-
-{% if metaDesc %}
-  {% set pageDesc = metaDesc %}
-{% endif %}
-
 <title>{{ pageTitle }}</title>
 <link rel="canonical" href="{{ currentUrl }}" />
 
@@ -23,10 +15,10 @@
   <meta name="twitter:creator" content="@{{ site.authorHandle | replace('@', '') }}" />
 {% endif %}
 
-{% if metaDesc %}
-  <meta name="description" content="{{ metaDesc }}" />
-  <meta name="twitter:description" content="{{ metaDesc }}" />
-  <meta property="og:description" content="{{ metaDesc }}" />
+{% if pageDesc %}
+  <meta name="description" content="{{ pageDesc }}" />
+  <meta name="twitter:description" content="{{ pageDesc }}" />
+  <meta property="og:description" content="{{ pageDesc }}" />
 {% endif %}
 
 {% if socialImage %}  
