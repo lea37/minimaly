@@ -15,6 +15,6 @@
   {% include "partials/header.njk" %}
   <main id="main-content">{{ content | safe }}</main>
   {% include "partials/footer.njk" %}
-  <script src="js/main.min.js"></script>
+  <script type="module">{% include "js/app.js" %}</script>
 </body> 
 </html>
