@@ -9,6 +9,7 @@ module.exports = function(config) {
     config.addPassthroughCopy("src/images");
     config.addPassthroughCopy({"src/js/service-worker.js": "service-worker.js"});
     config.addPassthroughCopy({ "src/_includes/css/main.min.css": "css/main.min.css" });
+    config.addPassthroughCopy({ "src/_includes/js/main.min.js": "js/main.min.js" });
 
     // Date format with luxon
     config.addFilter("dateDisplay", require("./src/filters/date.js") );
