@@ -20,9 +20,7 @@ pageClass: homepage
             {%- for item in collections.lastPosts -%}
                 {% include 'partials/components/post-list.njk' %}
             {%- endfor -%}
-        {% if site.showAsGrid %}
-            </div>
-        {% endif %}
+        </div>
         <div class="u-flex u-justify-content-end">
             <a href="/blog/" class="s-marg-t-600">Voir tous les articles -></a>
         </div>
