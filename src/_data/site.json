@@ -27,7 +27,7 @@
     },
     {
         "name": "Blog",
-        "url": "/blog/",
+        "url": "/blog",
         "external": false
     }
   ]
