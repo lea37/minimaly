@@ -13,13 +13,9 @@ pageClass: blog
         {% else %}
             <div class="list">
         {% endif %}
-            {%- for item in collections.posts -%}
-                {% include 'partials/components/post-list.njk' %}
-            {%- endfor -%}
-        {% if site.showAsGrid %}
+                {%- for item in collections.posts -%}
+                    {% include 'partials/components/post-list.njk' %}
+                {%- endfor -%}
             </div>
-        {% else %}
-            </div>
-        {% endif %}
     </div>
 </div>

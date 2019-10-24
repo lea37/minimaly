@@ -17,14 +17,10 @@ pageClass: homepage
         {% else %}
             <div class="list">
         {% endif %}
-            {%- for item in collections.lastPosts -%}
-                {% include 'partials/components/post-list.njk' %}
-            {%- endfor -%}
-        {% if site.showAsGrid %}
+                {%- for item in collections.lastPosts -%}
+                    {% include 'partials/components/post-list.njk' %}
+                {%- endfor -%}
             </div>
-        {% else %}
-            </div>
-        {% endif %}
         <div class="u-flex u-justify-content-end">
             <a href="/blog/" class="s-marg-t-600">Show all posts -></a>
         </div>
