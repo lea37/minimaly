@@ -1,6 +1,6 @@
 {% if site.navItems %}
 <nav aria-label="main-navigation">
-    <ul role="menubar" class="u-flex u-align-center">
+    <ul role="menubar" class="u-flex u-align-center u-justify-content-between u-flex-wrap">
         {% for item in site.navItems %}
             <li role="menuitem" class="u-inline-block">
                 <a href="{{item.url}}">{{item.name}}</a>

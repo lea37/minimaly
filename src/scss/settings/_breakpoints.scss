@@ -1,0 +1,4 @@
+$sm-breakpoint: #{'(min-width: ' + map-get($minimaly-breakpoints, 'sm') + ')'};
+$md-breakpoint: #{'(min-width: ' + map-get($minimaly-breakpoints, 'md') + ')'};
+$lg-breakpoint: #{'(min-width: ' + map-get($minimaly-breakpoints, 'lg') + ')'};
+$xl-breakpoint: #{'(min-width: ' + map-get($minimaly-breakpoints, 'xl') + ')'};

@@ -16,6 +16,12 @@ $tokens: (
     grey: #a4a2a2,
     hightlight: #FF0000
   ),
+  breakpoints: (
+    sm: 20rem,
+    md: 40rem,
+    lg: 50rem,
+    xl: 70rem
+  ),
   fonts: (
     base: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
     serif: "'Lora', serif"

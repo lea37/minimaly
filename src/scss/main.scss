@@ -35,6 +35,7 @@
 @import "settings/mapping";
 @import "settings/color";
 @import "settings/sizes";
+@import "settings/breakpoints";
 @import "settings/fonts";
 
 // THEME GLOBAL PURPOSE
@@ -104,13 +105,18 @@ body {
 
 // GLOBAL
 .inner-wrapper {
-  @media screen and (max-width: 50rem) {
-    padding-left: var(--sizes-base);
-    padding-right: var(--sizes-base);
-  }
+  padding-left: var(--sizes-base);
+  padding-right: var(--sizes-base);
   max-width: var(--measure);
   margin-right: auto;
   margin-left: auto;
+  flex-direction: column;
+  
+  @media screen and #{$lg-breakpoint} {
+    padding-left: 0;
+    padding-right: 0;
+    flex-direction: row;
+  }
 
   &--small {
     max-width: 40rem;
