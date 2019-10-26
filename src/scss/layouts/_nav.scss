@@ -8,7 +8,7 @@ nav {
     ul {
         li {
             @media screen and #{$md-breakpoint} {
-                margin-left: var(--sizes-base);
+                margin-left: var(--sizes-600);
                 margin-right: 0;
             }
         }

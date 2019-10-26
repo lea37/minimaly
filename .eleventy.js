@@ -30,12 +30,12 @@ module.exports = function(config) {
           .slice(0, site.maxPostsPerPage);
     });
 
+    // Custom src => output folders
     return {
         dir: {
             input: "src",
             output: "dist",
         },
-        passthroughFileCopy: true,
         templateFormats : ["njk", "md", "html"]
     };
 }

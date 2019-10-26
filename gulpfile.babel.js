@@ -5,16 +5,21 @@ import concat   from 'gulp-concat';
 import uglify   from 'gulp-uglify';
 import rename   from 'gulp-rename';
 import cleanCSS from 'gulp-clean-css';
+import imagemin from 'gulp-imagemin';
 import del      from 'del';
  
 const paths = {
   styles: {
-    src: 'src/scss/**/*.scss',
+    src: './src/scss/**/*.scss',
     dest: './src/_includes/css'
   },
   scripts: {
-    src: 'src/js/main.js',
+    src: './src/js/main.js',
     dest: './src/_includes/js'
+  },
+  images: {
+    src: './src/images/**',
+    dest: 'dist/images'
   }
 };
  
@@ -22,7 +27,18 @@ const paths = {
  * For small tasks you can export arrow functions
  */
 export const clean = () => del([ 'assets' ]);
- 
+
+
+/*
+ *  Images optimisation
+ */
+ export function images() {
+  return gulp.src(paths.images.src)
+        .pipe(imagemin())
+        .pipe(gulp.dest(paths.images.dest))
+ }
+
+
 /*
  * You can also declare named functions and export them as tasks
  */
@@ -52,10 +68,11 @@ export function scripts() {
 function watchFiles() {
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.styles.src, styles);
+  gulp.watch(paths.images.src, images);
 }
 export { watchFiles as watch };
  
-const build = gulp.series(clean, gulp.parallel(styles, scripts));
+const build = gulp.series(clean, gulp.parallel(styles, scripts, images));
 /*
  * Export a default task
  */
