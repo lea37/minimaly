@@ -30,5 +30,12 @@
         "url": "/blog",
         "external": false
     }
-  ]
+  ],
+  "feed": {
+    "subtitle": "Minimal starter",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "url": "https://minimaly.lea-tortay.com/feed/feed.xml",
+    "id": "https://minimaly.lea-tortay.com/"
+  }
 }

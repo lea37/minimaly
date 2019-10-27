@@ -19,7 +19,7 @@ const paths = {
   },
   images: {
     src: './src/images/**',
-    dest: 'dist/images'
+    dest: './src/images'
   }
 };
  
