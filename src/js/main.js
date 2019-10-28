@@ -100,4 +100,12 @@ window.addEventListener('load', function() {
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
   }
+
+  // add lazyload attribute to single post images
+  const singlePostImgs = document.querySelectorAll('.single-post .post img');
+  if (singlePostImgs) {
+    for (var i = 0; i < singlePostImgs.length; i++) {
+      singlePostImgs[i].setAttribute('loading', 'lazy');
+    }
+  }
 });

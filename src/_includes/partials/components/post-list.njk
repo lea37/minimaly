@@ -7,11 +7,11 @@
     {% if site.postWithImage %}
         {% if item.data.image %}
             <div class="card__image {{frameClass}}">
-                <img src="../images/posts/{{ item.data.image }}" alt="" aria-hidden="true">
+                <img loading="lazy" src="../images/posts/{{ item.data.image }}" alt="" aria-hidden="true">
             </div>
         {% else %}
             <div class="card__image {{frameClass}}">
-                <img src="../images/posts/default.png" alt="">
+                <img loading="lazy" src="../images/posts/default.png" alt="">
             </div>
         {% endif %}
     {% endif %}
