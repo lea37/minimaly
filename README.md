@@ -24,15 +24,15 @@ Look at [Eleventy doc](https://www.11ty.io/) cause it is super powerfull.
 Once cloned, `cd minimaly` then `npm install` to install all the dependencies. 
 
 ### 3 . UI settings
-You can then modify `token.json` in `src/_data` folder to change the color, font family, breakpoints ... It will automatically generate a `_tokens.scss` in `scss/settings` folder, do not change directly this file since it's automated, always modify `token.json`.
+You can then modify `token.json` in `src/_data` folder to change the color, breakpoints, sizes... It will automatically generate a `_tokens.scss` in `scss/settings` folder, do not change directly this file since it's automated, always modify `token.json`.
 
 ### 4. Theme options
 You can also change any data in `src/_data/site.json` 
 Display posts as list `showAsGrid: false`
-If you don't want your post to have thumbnail change `postWithImage: false`
-If there is a cover title it will display the cover hero. You can choose cover text alignement just change `coverTextAlignement: "center"` (left, center, right);
-How many posts are render on homepage `maxPostsPerPage: 6`
-Customize your navigation `navItems`
+- If you don't want your post to have thumbnail change `postWithImage: false`
+- If there is a cover title it will display the cover hero. You can choose cover text alignement just change `coverTextAlignement: "center"` (left, center, right)
+- How many posts are render on homepage `maxPostsPerPage: 6`
+- Customize your navigation `navItems`
 
 ### 4 . Run in the browser
 You can run `npm run serve` and go to `localhost:8080` adress in your browser to check the result.
