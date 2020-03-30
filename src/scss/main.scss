@@ -36,7 +36,6 @@
 @import "settings/color";
 @import "settings/sizes";
 @import "settings/breakpoints";
-@import "settings/fonts";
 
 // THEME GLOBAL PURPOSE
 @import "theme/stack";
@@ -54,11 +53,11 @@
 @import "layouts/card";
 
 // FONT
-@import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
-}
+// @import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Helvetica, Arial', sans-serif; }
+// @supports (font-variation-settings: normal) {
+//   html { font-family: 'Inter var', sans-serif; }
+// }
 
 
 * {
