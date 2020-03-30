@@ -10,8 +10,12 @@
     {% set coverBgColor %}background: {{ site.coverBackgroundColor }} cover; {% endset %}
 {% endif %}
 
+{% if site.coverTextColor %}
+    {% set coverTextColor %}color: {{ site.coverTextColor }}; {% endset %}
+{% endif %}
+
 <div class="cover u-cover" style="{{ coverBgColor }} {{ coverBg }}">
-  <div class="stack {{ site.coverTextAlignement }}">
+  <div class="stack {{ site.coverTextAlignement }}" style="{{ coverTextColor }}">
     <h1>{{ site.coverTitle }}</h1>
     <p>{{ subtitle }}</p>
   </div>
