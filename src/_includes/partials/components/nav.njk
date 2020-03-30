@@ -3,7 +3,7 @@
     <ul role="menubar" class="u-flex u-align-center u-justify-content-between u-flex-wrap">
         {% for item in site.navItems %}
             <li role="menuitem" class="u-inline-block">
-                <a href="{{item.url}}">{{item.name}}</a>
+                <a href="{{item.url}}" class="s-pad-t-base s-pad-b-base">{{item.name}}</a>
             </li>
         {% endfor %}
             <li role="menuitem" class="switch u-inline-block">

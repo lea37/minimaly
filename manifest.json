@@ -4,7 +4,7 @@
   "orientation": "portrait-primary",
   "short_name": "Minimaluy",
   "description": "Minimaly is a minimal lightweight Eleventy starter kit to help you to create your own blog or personal website.",
-  "start_url": "/home",
+  "start_url": "https://minimaly.lea-tortay.com/",
   "background_color": "#000000",
   "theme_color": "#ffffff",
   "display": "standalone",
